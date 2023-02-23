@@ -5,18 +5,16 @@ import classes from "./Task.module.css";
 
 
 export function Task(){
-    const todos = useSelector(store => store.todos);
-    let {id} = useParams();
-    const item = todos.filter(item => (":" + item.id) == id)[0]
+    const item = useSelector(store => store.todos.item);
     return (<div className = {classes.container}>
         <h2>
-           <NavLink to = "/">Main</NavLink>
+           <NavLink className = {classes.header_title} to = "/">Main</NavLink>
         </h2>
     <div>
-        <p>Name: {item.name}</p>
-        <p>Description: {item.desc}</p>
-        <p>Date: {item.date}</p>
-        <p>Info: {item.info}</p>
+        <p><span className={classes.span_titles}>Name: </span>{item.name}</p>
+        <p><span className={classes.span_titles}>Description: </span>{item.desc}</p>
+        <p><span className={classes.span_titles}>Date: </span>{item.date}</p>
+        <p><span className={classes.span_titles}>Info: </span>{item.info}</p>
     </div>
     </div>)
 }

@@ -6,3 +6,14 @@
     width: 500px;
     margin: 0 auto;
 }
+
+.header_title{
+    text-decoration: none;
+}
+.header_title:hover{
+    opacity: 0.7;
+}
+
+.span_titles{
+    color:rgb(236, 24, 219);
+}
